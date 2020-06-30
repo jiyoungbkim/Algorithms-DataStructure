@@ -10,6 +10,15 @@ document.body.append(button);
 var result = document.createElement('div');
 document.body.append(result);
 
+button.addEventListener('click', function callback () {
+    if(word.textContent[word.textContent.length-1] === input.value[0]) {
+        result.textContent = '딩동댕';
+        word.textContent = input.value;
+        input.value = '';
+    } else {
+        result.textContent = '땡';
+    }
+});
 /* var word = '딸기'
 while(true) {
     var newWord = prompt(word);
