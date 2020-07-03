@@ -1,13 +1,17 @@
 var body = document.body;
 
-var nominee = [1,2,3,4,5,6,7,8,9];
-var numberArray = [];
+var nominee;
+var numberArray;
 
-for (var i=0; i < 4; i ++) {
-    var select = nominee.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
-    numberArray.push(select);
+function numberPick() {
+    nominee = [1,2,3,4,5,6,7,8,9];
+    numberArray = [];
+    for (var i=0; i < 4; i ++) {
+        var select = nominee.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
+        numberArray.push(select);
+    }
 }
-
+numberPick();
 console.log(numberArray);
 
 var result = document.createElement('h1');
@@ -31,28 +35,18 @@ form.addEventListener('submit', function callback (event) {
         result.textContent = 'Home Run';
         input.value = '';
         input.focus();
-        nominee = [1,2,3,4,5,6,7,8,9];
-        numberArray = [];
-        for (var i=0; i < 4; i ++) {
-            var select = nominee.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
-            numberArray.push(select);
-        }
+        numberPick();
         wrongCount = 0;
     } else { //답이 틀리면
         var answerArray = answer.split('');
         var strike = 0;
         var ball = 0;
         wrongCount++;
-        if(wrongCount > 10) { //10번 넘게 틀린 경우
+        if(wrongCount > 9) { //10번 넘게 틀린 경우
             result.textContent = '10번 넘어서 실패! 답은' + numberArray.join(',') + '였습니다.'
             input.value = '';
             input.focus();
-            nominee = [1,2,3,4,5,6,7,8,9];
-            numberArray = [];
-            for (var i=0; i < 4; i ++) {
-                var select = nominee.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
-                numberArray.push(select);
-            }
+            numberPick();
             wrongCount = 0;
         } else {  //10번 미만으로 틀린경우
             console.log('wrong answer',answerArray);
