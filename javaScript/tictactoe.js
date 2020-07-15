@@ -3,6 +3,7 @@ var table = document.createElement('table');
 var trArray = [];
 var tdArray = []; //빈배열
 var turn = 'X';
+var result = document.createElement('div');
 var callback = function(event) {
     console.log(event.target); // 칸
     console.log(event.target.parentNode); // 줄
@@ -33,12 +34,14 @@ var callback = function(event) {
             full = true;
         }
         // 대각선 검사
-        if(trNum - tdNum === 0 || Math.abs(trNum - tdNum) === 2) { // 대각선 검사 필요한 경우
+        if(trNum - tdNum === 0) { // 대각선 검사 필요한 경우
             if(tdArray[0][0].textContent === turn &&
                 tdArray[1][1].textContent === turn &&
                 tdArray[2][2].textContent === turn ){
                 full = true;    
             }
+        }
+        if(Math.abs(trNum - tdNum) === 2) {
             if(tdArray[0][2].textContent === turn &&
                 tdArray[1][1].textContent === turn &&
                 tdArray[2][0].textContent === turn ){
@@ -47,7 +50,15 @@ var callback = function(event) {
         }
         // 다 찼으면 
         if(full){ // 조건문에 ===true는 생략 가능
-            console.log(turn + '님이 승리!');
+           // console.log(turn + '님이 승리!');
+           result.textContent = turn + '님이 승리!';
+            // 초기화
+            turn = 'X';
+            tdArray.forEach(function(tr){
+                tr.forEach(function (td){
+                    td.textContent = '';
+                })
+            })
         } else { // 다 안찼으면
             if(turn === 'X') {
                 turn = 'O';
@@ -70,4 +81,5 @@ for(var i = 0; i < 3; i++) {
     table.appendChild(tr)
 }
 body.appendChild(table);
+body.appendChild(result);
 console.log('줄들', trArray, '칸들', tdArray);
