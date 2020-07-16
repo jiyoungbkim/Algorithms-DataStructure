@@ -9,3 +9,6 @@ while(nominee.length > 0) {
     shuffle.push(shiftValue);
 }
 console.log(shuffle);
+var bonus = shuffle[shuffle.length - 1];
+var winningNum = shuffle.slice(0, 6); // 0~5
+console.log('당첨숫자들', winningNum.sort(function(p, c){ return p - c; }), '보너스', bonus);
