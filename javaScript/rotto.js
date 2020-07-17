@@ -13,7 +13,8 @@ var bonus = shuffle[shuffle.length - 1];
 var winningNum = shuffle.slice(0, 6); // 0~5
 console.log('당첨숫자들', winningNum.sort(function(p, c){ return p - c; }), '보너스', bonus);
 
-var result = document.getElementById('result');
+//var result = document.getElementById('result');
+var result = document.querySelector('#result');
 //var result = document.getElementsByTagName('div');
 
 /* for(var i = 0; i < winningNum.length; i++) {
@@ -33,6 +34,21 @@ function ballStyle(Num, result){
     ball.style.height = '20px';
     ball.style.textAlign = 'center';
     ball.style.marginRight = '10px';
+    ball.style.fontSize = '12px';
+    ball.className = 'ballId' + Num;
+    var backgroundColor;
+    if (Num <= 10) {
+        backgroundColor = 'red';
+    } else if (Num <= 20) {
+        backgroundColor = 'orange';
+    } else if (Num <= 30) {
+        backgroundColor = 'yellow';
+    } else if (Num <= 40) {
+        backgroundColor = 'blue';
+    } else {
+        backgroundColor = 'green';
+    }
+    ball.style.backgroundColor = backgroundColor;
     result.appendChild(ball);
 }
 setTimeout(function callback() {
@@ -55,6 +71,7 @@ setTimeout(function callback() {
 }, 6000);
 
 setTimeout(function callback() {
-    var bResult = document.getElementsByClassName('bResult')[0];
+    //var bResult = document.getElementsByClassName('bResult')[0];
+    var bResult = document.querySelector('.bResult');
     ballStyle(bonus, bResult);
 }, 7000);
