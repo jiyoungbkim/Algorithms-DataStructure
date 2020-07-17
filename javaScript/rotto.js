@@ -23,83 +23,38 @@ var result = document.getElementById('result');
         result.appendChild(ball);
     }, 1000); // 밀리초   
 } */
-
-setTimeout(function callback() {
+function ballStyle(Num, result){
     var ball = document.createElement('div');
-    ball.textContent = winningNum[0];
+    ball.textContent = Num;
     ball.style.display = 'inline-block';
     ball.style.border = '1px solid black';
     ball.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
     ball.style.width = '20px';
     ball.style.height = '20px';
     ball.style.textAlign = 'center';
+    ball.style.marginRight = '10px';
     result.appendChild(ball);
+}
+setTimeout(function callback() {
+    ballStyle(winningNum[0], result);
 }, 1000);
 setTimeout(function callback() {
-    var ball = document.createElement('div');
-    ball.textContent = winningNum[1];
-    ball.style.display = 'inline-block';
-    ball.style.border = '1px solid black';
-    ball.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
-    ball.style.width = '20px';
-    ball.style.height = '20px';
-    ball.style.textAlign = 'center';
-    result.appendChild(ball);
+    ballStyle(winningNum[1], result);
 }, 2000);
 setTimeout(function callback() {
-    var ball = document.createElement('div');
-    ball.textContent = winningNum[2];
-    ball.style.display = 'inline-block';
-    ball.style.border = '1px solid black';
-    ball.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
-    ball.style.width = '20px';
-    ball.style.height = '20px';
-    ball.style.textAlign = 'center';
-    result.appendChild(ball);
+    ballStyle(winningNum[2], result);
 }, 3000);
 setTimeout(function callback() {
-    var ball = document.createElement('div');
-    ball.textContent = winningNum[3];
-    ball.style.display = 'inline-block';
-    ball.style.border = '1px solid black';
-    ball.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
-    ball.style.width = '20px';
-    ball.style.height = '20px';
-    ball.style.textAlign = 'center';
-    result.appendChild(ball);
+    ballStyle(winningNum[3], result);
 }, 4000);
 setTimeout(function callback() {
-    var ball = document.createElement('div');
-    ball.textContent = winningNum[4];
-    ball.style.display = 'inline-block';
-    ball.style.border = '1px solid black';
-    ball.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
-    ball.style.width = '20px';
-    ball.style.height = '20px';
-    ball.style.textAlign = 'center';
-    result.appendChild(ball);
+    ballStyle(winningNum[4], result);
 }, 5000);
 setTimeout(function callback() {
-    var ball = document.createElement('div');
-    ball.textContent = winningNum[5];
-    ball.style.display = 'inline-block';
-    ball.style.border = '1px solid black';
-    ball.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
-    ball.style.width = '20px';
-    ball.style.height = '20px';
-    ball.style.textAlign = 'center';
-    result.appendChild(ball);
+    ballStyle(winningNum[5], result);
 }, 6000);
 
 setTimeout(function callback() {
     var bResult = document.getElementsByClassName('bResult')[0];
-    var bBall = document.createElement('div');
-    bBall.style.display = 'inline-block';
-    bBall.style.border = '1px solid black';
-    bBall.style.borderRadius = '10px'; //css에서는 border-radius인데 자바스크립트에서는 빼기이기 때문에 카멜케이스로 바뀐다
-    bBall.style.width = '20px';
-    bBall.style.height = '20px';
-    bBall.style.textAlign = 'center';
-    bBall.textContent = bonus;
-    result.appendChild(bBall);
+    ballStyle(bonus, bResult);
 }, 7000);
