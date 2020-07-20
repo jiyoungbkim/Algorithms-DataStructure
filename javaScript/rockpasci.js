@@ -1,23 +1,35 @@
-var comsChoice = 0;
+var coordinate = 0;
 var dictionary = { // 딕셔너리 자료구조
     rock : '0',
     paper : '-380px',
     scissors : '-770px'
 };
+/* var dictionary2 = {
+    '0' : '바위',
+    '-380px' : '보',
+    '-770px' : '가위'
+};  */
+console.log(Object.entries(dictionary));
+function comsChoice(coordinate) {
+    return Object.entries(dictionary).find(function(v) {
+        return v[1] == coordinate;
+    })[0];
+}
+
 setInterval(function () {
-    if (comsChoice === dictionary.rock) {
-        comsChoice = dictionary.paper;
-    } else if (comsChoice === dictionary.paper) {
-        comsChoice = dictionary.scissors;
+    if (coordinate === dictionary.rock) {
+        coordinate = dictionary.paper;
+    } else if (coordinate === dictionary.paper) {
+        coordinate = dictionary.scissors;
     } else {
-        comsChoice = dictionary.rock;
+        coordinate = dictionary.rock;
     }
     document.querySelector('#computer').style.background = 
-    'url(../image/rock-paper-scissors.png) ' + comsChoice + ' 0';
+    'url(../image/rock-paper-scissors.png) ' + coordinate + ' 0';
 }, 100);
 
 document.querySelectorAll('.btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
-        console.log(this.textContent, comsChoice);
+        console.log(this.textContent, comsChoice(coordinate));
     });        
 });
