@@ -16,20 +16,55 @@ function comsChoice(coordinate) {
     })[0];
 }
 
-setInterval(function () {
-    if (coordinate === dictionary.rock) {
-        coordinate = dictionary.paper;
-    } else if (coordinate === dictionary.paper) {
-        coordinate = dictionary.scissors;
-    } else {
-        coordinate = dictionary.rock;
-    }
-    document.querySelector('#computer').style.background = 
-    'url(../image/rock-paper-scissors.png) ' + coordinate + ' 0';
-}, 100);
+var Interval;
+function IntervalMaker(){
+    Interval = setInterval(function () {
+        if (coordinate === dictionary.rock) {
+            coordinate = dictionary.paper;
+        } else if (coordinate === dictionary.paper) {
+            coordinate = dictionary.scissors;
+        } else {
+            coordinate = dictionary.rock;
+        }
+        document.querySelector('#computer').style.background = 
+        'url(../image/rock-paper-scissors.png) ' + coordinate + ' 0';
+    }, 100);    
+}
+
+IntervalMaker();
 
 document.querySelectorAll('.btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
-        console.log(this.textContent, comsChoice(coordinate));
+        clearInterval(Interval);
+        setTimeout(function() {
+            IntervalMaker();
+        }, 1000);
+        var myChoice = this.textContent;
+        console.log(myChoice, comsChoice(coordinate));
+        if (myChoice === '바위') {
+            if (comsChoice(coordinate) === 'rock') {
+                console.log('비겼습니다. ');
+            } else if (comsChoice(coordinate) === 'scissors') {
+                console.log('이겼습니다 !!!');
+            } else {
+                console.log('졌습니다. ㅠㅠ');
+            }
+        } else if (myChoice === '보') {
+            if (comsChoice(coordinate) === 'paper') {
+                console.log('비겼습니다. ');
+            } else if (comsChoice(coordinate) === 'rock') {
+                console.log('이겼습니다 !!!');
+            } else {
+                console.log('졌습니다. ㅠㅠ');
+            }
+        } else if (myChoice === '가위') {
+            if (comsChoice(coordinate) === 'scissors') {
+                console.log('비겼습니다. ');
+            } else if (comsChoice(coordinate) === 'paper') {
+                console.log('이겼습니다 !!!');
+            } else {
+                console.log('졌습니다. ㅠㅠ');
+            }    
+        }
     });        
 });
