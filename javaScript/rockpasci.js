@@ -12,7 +12,7 @@ var dictionary = { // 딕셔너리 자료구조
 console.log(Object.entries(dictionary));
 function comsChoice(coordinate) {
     return Object.entries(dictionary).find(function(v) {
-        return v[1] == coordinate;
+        return v[1] === coordinate;
     })[0];
 }
 
@@ -33,6 +33,15 @@ function IntervalMaker(){
 
 IntervalMaker();
 
+var scores = {
+    scissors : 1,
+    rock : 0,
+    paper : -1,
+    가위 : 1,
+    바위 : 0,
+    보 : -1,
+};
+
 document.querySelectorAll('.btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
         clearInterval(Interval);
@@ -41,30 +50,38 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         }, 1000);
         var myChoice = this.textContent;
         console.log(myChoice, comsChoice(coordinate));
-        if (myChoice === '바위') {
-            if (comsChoice(coordinate) === 'rock') {
-                console.log('비겼습니다. ');
-            } else if (comsChoice(coordinate) === 'scissors') {
-                console.log('이겼습니다 !!!');
-            } else {
-                console.log('졌습니다. ㅠㅠ');
-            }
-        } else if (myChoice === '보') {
-            if (comsChoice(coordinate) === 'paper') {
-                console.log('비겼습니다. ');
-            } else if (comsChoice(coordinate) === 'rock') {
-                console.log('이겼습니다 !!!');
-            } else {
-                console.log('졌습니다. ㅠㅠ');
-            }
-        } else if (myChoice === '가위') {
-            if (comsChoice(coordinate) === 'scissors') {
-                console.log('비겼습니다. ');
-            } else if (comsChoice(coordinate) === 'paper') {
-                console.log('이겼습니다 !!!');
-            } else {
-                console.log('졌습니다. ㅠㅠ');
-            }    
+        if(scores[myChoice] - scores[comsChoice(coordinate)] === 0) {
+            console.log('비겼습니다. ');
+        } else if (scores[myChoice] - scores[comsChoice(coordinate)] === -1 || scores[myChoice] - scores[comsChoice(coordinate)] === 2) {
+            console.log('이겼습니다 !!!');
+        } else {
+            console.log('졌습니다. ㅠㅠ');
         }
+
+        // if (myChoice === '바위') {
+        //     if (comsChoice(coordinate) === 'rock') {
+        //         console.log('비겼습니다. ');
+        //     } else if (comsChoice(coordinate) === 'scissors') {
+        //         console.log('이겼습니다 !!!');
+        //     } else {
+        //         console.log('졌습니다. ㅠㅠ');
+        //     }
+        // } else if (myChoice === '보') {
+        //     if (comsChoice(coordinate) === 'paper') {
+        //         console.log('비겼습니다. ');
+        //     } else if (comsChoice(coordinate) === 'rock') {
+        //         console.log('이겼습니다 !!!');
+        //     } else {
+        //         console.log('졌습니다. ㅠㅠ');
+        //     }
+        // } else if (myChoice === '가위') {
+        //     if (comsChoice(coordinate) === 'scissors') {
+        //         console.log('비겼습니다. ');
+        //     } else if (comsChoice(coordinate) === 'paper') {
+        //         console.log('이겼습니다 !!!');
+        //     } else {
+        //         console.log('졌습니다. ㅠㅠ');
+        //     }    
+        // }
     });        
 });
