@@ -49,10 +49,13 @@ document.querySelectorAll('.btn').forEach(function(btn) {
             IntervalMaker();
         }, 1000);
         var myChoice = this.textContent;
+        var myScore = scores[myChoice];
+        var comsScore = scores[comsChoice(coordinate)];
+        var scoreGap = myScore - comsScore;
         console.log(myChoice, comsChoice(coordinate));
-        if(scores[myChoice] - scores[comsChoice(coordinate)] === 0) {
+        if(scoreGap === 0) {
             console.log('비겼습니다. ');
-        } else if (scores[myChoice] - scores[comsChoice(coordinate)] === -1 || scores[myChoice] - scores[comsChoice(coordinate)] === 2) {
+        } else if ([-1,2].includes(scoreGap)) {
             console.log('이겼습니다 !!!');
         } else {
             console.log('졌습니다. ㅠㅠ');
