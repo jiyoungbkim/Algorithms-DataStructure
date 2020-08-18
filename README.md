@@ -4,6 +4,7 @@
 - [제1-1장: 변수, 배열, 반복문](JavaDataStructure/chapter1)
 
 #### [인프런] 영리한 프로그래밍을 위한 알고리즘 강좌
+- [1. 순환 (Recursion)](AlgorithmsforPrograming/recursion/)
 
 #### [인프런] 웹 게임을 만들며 배우는 자바스크립트
 - [자바스크립트 소스코드](javaScript)
