@@ -1,6 +1,6 @@
 package AlgorithmsforPrograming.sort;
 
-public class Sort01selectionSort {
+public class Sort01selection {
     public static void main(String[] args) {
         int [] selSort = {29, 10, 14, 37, 13};
         int n = selSort.length;
