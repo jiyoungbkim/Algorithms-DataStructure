@@ -13,7 +13,7 @@ public class Recursion14maze {
         {0, 1, 1, 1, 0, 1, 0, 0}
     };
     private static final int PATHWAY_COLOUR = 0;    // white
-    private static final int WALL_COLOUR = 1;       // blue
+    //private static final int WALL_COLOUR = 1;       // blue
     private static final int BLOCKED_COLOUR = 2;    // red
     private static final int PATH_COLOUR = 3;       // green
 
