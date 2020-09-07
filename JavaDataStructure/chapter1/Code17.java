@@ -1,4 +1,4 @@
-package JavaDataStructure.chapter2;
+package JavaDataStructure.chapter1;
 
 public class Code17 {
     public static void main(String[] args) {

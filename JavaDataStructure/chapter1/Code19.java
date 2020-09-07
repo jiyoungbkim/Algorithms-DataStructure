@@ -1,4 +1,4 @@
-package JavaDataStructure.chapter2;
+package JavaDataStructure.chapter1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
