@@ -1,4 +1,4 @@
-package JavaDataStructure.chapter1.section01;
+package JavaDataStructure.chapter1.section1;
 
 import java.util.Scanner;
 
