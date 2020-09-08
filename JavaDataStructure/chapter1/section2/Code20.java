@@ -12,7 +12,7 @@ public class Code20 {
     
     public static void main(String[] args) {        
         try {
-            Scanner inFile = new Scanner(new File("JavaDataStructure/chapter2/input.txt"));
+            Scanner inFile = new Scanner(new File("JavaDataStructure/chapter1/section2/input.txt"));
             while(inFile.hasNext()) {
                 name[n] = inFile.next();
                 number[n] = inFile.next();

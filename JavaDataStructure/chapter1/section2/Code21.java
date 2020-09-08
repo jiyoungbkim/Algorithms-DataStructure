@@ -10,7 +10,7 @@ public class Code21 {
 
     public static void main(String[] args) {
         try {
-            Scanner inFile = new Scanner(new File("JavaDataStructure/chapter2/grid.txt"));           
+            Scanner inFile = new Scanner(new File("JavaDataStructure/chapter1/section2/grid.txt"));           
             n = inFile.nextInt();
             grid = new int [n][n];
             for(int i = 0; i < n; i++){
