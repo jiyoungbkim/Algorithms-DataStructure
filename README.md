@@ -17,4 +17,4 @@
 - [자바스크립트 소스코드](javaScript)
 
 #### 자바스크립트 100제
-- [JavaScript 100](JS100)
+- [JavaScript 100](JS100Quiz)
