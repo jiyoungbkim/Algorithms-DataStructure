@@ -53,10 +53,13 @@ print("Redd\b Apple") # Red Apple
 # 2 : 처음 만나는 점(.) 이후 부분은 제외
 # 3 : 남은 글자 중 처음 세자리 + 글자 개수 + 글자 내 'e'개수 + "!"로 구성
 # nav51!
+
+# 나의 풀이
 arr = "http://naver.com"
 password = arr[7:arr.index(".")]
 print(password[:3]+str(len(password))+str(password.count("e"))+"!")
-#해설
+
+# 해설
 url = "http://naver.com"
 my_str = url.replace("http://","") # 1
 my_str = my_str[:my_str.index(".")] # 2
