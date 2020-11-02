@@ -21,4 +21,4 @@
 #### Python
 - [파이썬 무료 강의 (기본편) - 6시간 뒤면 나도 개발자](Python/Basic_6hours)
 - [Code Festival: Python 100제](Python100Quiz)
-- [이것이 취업을 위한 코딩 테스트다 with 파이썬](Python/Python_forCT)
+- [이것이 코딩 테스트다 with 파이썬](Python/Python_forCT)
