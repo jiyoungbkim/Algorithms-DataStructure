@@ -13,7 +13,7 @@ def strReverse(str):
         return strReverse(str[1:]) + str[0]
 print(strReverse('leehojun'))
 
-# 각 자리수의 합
+# 각 자릿수의 합
 # 반복문
 x = 0
 for i in '2231':
