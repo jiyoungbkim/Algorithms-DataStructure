@@ -39,7 +39,10 @@ def merge(input_list):
     while group_two:
         result.append(group_two.pop(0))
     return result
-given_list = input().split(' ')
-given_list = [int(i) for i in given_list]
 
-print(merge(given_list))
+# given_list = input().split(' ')
+# given_list = [int(i) for i in given_list]
+
+# print(merge(given_list))
+
+print(merge(data))
