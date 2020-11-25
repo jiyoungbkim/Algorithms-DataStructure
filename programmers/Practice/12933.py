@@ -1,3 +1,4 @@
+# 정수 내림차순으로 배치하기
 # 나의 풀이
 def solution(n):
     lst = list(str(n))
