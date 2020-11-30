@@ -1,4 +1,4 @@
-## 📚 2020_Study
+## 📚 Algorithms-DataStructure_Study
 
 #### [인프런] Java로 배우는 자료구조
 - [제1-1장: 변수, 배열, 반복문](JavaDataStructure/chapter1/section1)
