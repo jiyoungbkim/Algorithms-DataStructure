@@ -25,4 +25,4 @@
 - [Code Festival: Python 100제](Python100Quiz)
 - [눈떠보니 코딩 테스트 전날](theDayBeforeCoding/Python)
 - [이것이 코딩 테스트다 with 파이썬](Python/Python_forCT)
-- [programmers 연습문제 Level 1](programmers/Practice/Python/Level_1)
+- [programmers 연습문제 Level 1](programmers/Practice/Python3/Level_1)
