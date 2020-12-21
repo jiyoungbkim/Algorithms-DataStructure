@@ -13,8 +13,10 @@
 #### [Elice Academy] Java 문제집
 - [1장. 도전! Java 동화 10제](JavaWorkbook)
 
-#### [인프런] JavaScript
-- [웹 게임을 만들며 배우는 자바스크립트](javaScript)
+#### Java
+- [programmers 연습문제 Level 1](programmers/Practice/Java/Level_1)
+
+#### JavaScript
 - [Code Festival: JavaScript 100제](JS100Quiz)
 - [눈떠보니 코딩 테스트 전날](theDayBeforeCoding/JavaScript)
 
@@ -23,3 +25,4 @@
 - [Code Festival: Python 100제](Python100Quiz)
 - [눈떠보니 코딩 테스트 전날](theDayBeforeCoding/Python)
 - [이것이 코딩 테스트다 with 파이썬](Python/Python_forCT)
+- [programmers 연습문제 Level 1](programmers/Practice/Python/Level_1)
