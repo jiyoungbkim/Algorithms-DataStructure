@@ -21,8 +21,8 @@
 - [눈떠보니 코딩 테스트 전날](theDayBeforeCoding/JavaScript)
 
 #### Python
-- [파이썬 (기본편) - 6시간 뒤면 나도 개발자](Python/Basic_6hours)
 - [Code Festival: Python 100제](Python100Quiz)
 - [눈떠보니 코딩 테스트 전날](theDayBeforeCoding/Python)
 - [이것이 코딩 테스트다 with 파이썬](Python/Python_forCT)
 - [programmers 연습문제 Level 1](programmers/Practice/Python3/Level_1)
+- [programmers 연습문제 Level 2](programmers/Practice/Python3/Level_2)
