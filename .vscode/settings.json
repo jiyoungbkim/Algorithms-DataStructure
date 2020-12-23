@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "/usr/local/bin/python3",
+    "configurations": [ 
+        { 
+            "console": "integratedTerminal", 
+            "args": ["<input.txt", "output.txt" ]
+       } 
+    ] 
+}
