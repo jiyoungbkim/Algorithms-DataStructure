@@ -1,5 +1,6 @@
 package programmers.Practice.Java.Level_1;
-
+// 하샤드 수
+// HarshadNumber
 public class p12947 {
 
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class p12947 {
         }
         return x % sum == 0;
     }
+
     public static boolean solution2(int x) {
         String[] arr = String.valueOf(x).split("");
         int sum = 0;
@@ -21,6 +23,7 @@ public class p12947 {
         }
         return x % sum == 0;
     }
+
     // 람다식 이용 sum 함수 사용시 전역변수로 설정
     static int sum = 0;
     public static boolean solution3(int x) {
