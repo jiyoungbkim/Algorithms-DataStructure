@@ -1,7 +1,8 @@
 package programmers.Practice.Java.Level_1;
 
 import java.util.Arrays;
-
+// 행렬의 덧셈
+// SumMatrix
 public class p12950 {
     public static void main(String[] args) {
         // int[][] A = { { 1, 2 }, { 2, 3 } };
