@@ -1,5 +1,6 @@
 package programmers.Practice.Java.Level_1;
-
+// 핸드폰 번호 가리기
+// phone_number
 public class p12948 {
     public static void main(String[] args) {      
         solution("01033334444");
