@@ -1,4 +1,4 @@
-package programmers.Practice.Java;
+package programmers.Practice.Java.Level_1;
 // 문자열 내 p와 y의 개수
 // numPY
 public class p12916 {
