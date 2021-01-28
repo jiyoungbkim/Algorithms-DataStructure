@@ -15,6 +15,7 @@
 
 #### Java
 - [programmers 연습문제 Level 1](programmers/Practice/Java/Level_1)
+- [programmers 연습문제 Level 2](programmers/Practice/Java/Level_2)
 
 #### JavaScript
 - [Code Festival: JavaScript 100제](JS100Quiz)
