@@ -13,7 +13,7 @@
 #### [Elice Academy] Java 문제집
 - [1장. 도전! Java 동화 10제](JavaWorkbook)
 
-#### Java
+#### JAVA
 - [programmers 연습문제 Level 1](programmers/Practice/Java/Level_1)
 - [programmers 연습문제 Level 2](programmers/Practice/Java/Level_2)
 
