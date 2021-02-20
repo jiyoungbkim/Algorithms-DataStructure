@@ -12,8 +12,8 @@ def solution(n):
                 lst.append(result)
                 result = 0
             elif i == '0':
-                result += 1
-        return max(lst)
+                result += 1                
+        return max(lst) if max(lst) > 0 else 0
 print(solution(1041))
 print(solution(32))
 print(solution(15))
