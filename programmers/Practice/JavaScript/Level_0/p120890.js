@@ -6,6 +6,7 @@ function solution(array, n) {
   for (let value of array) {
     if (Math.abs(n - answer) >= Math.abs(n - value)) answer = value;
   }
+  return answer;
 }
 console.log(solution([3, 10, 28], 20));
 // console.log(solution([10, 11, 12], 13));
