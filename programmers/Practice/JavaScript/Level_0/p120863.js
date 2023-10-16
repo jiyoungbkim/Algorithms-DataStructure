@@ -12,21 +12,30 @@ function solution(polynomial) {
     item.includes("x")
       ? isNaN(item.slice(0, 1))
         ? xCount++
-        : (xNum += +item.slice(0, 1))
+        : (xNum += +item.slice(0, item.indexOf("x")))
       : (num += +item);
   });
-  return `${
-    num > 0
-      ? xCount + xNum > 1
-        ? xCount + xNum + "x + " + num
-        : "x + " + num
-      : xCount + xNum + "x"
-  }`;
+  let answer = "";
+  if (xCount + xNum) answer += xCount + xNum === 1 ? "x" : `${xCount + xNum}x`;
+  if (num) answer += answer ? ` + ${num}` : `${num}`;
+  return answer;
+  // return `${
+  //   num > 0
+  //     ? xCount + xNum > 1
+  //       ? xCount + xNum + "x + " + num
+  //       : xCount === 0
+  //       ? num
+  //       : "x + " + num
+  //     : xCount + xNum > 1
+  //     ? xCount + xNum + "x"
+  //     : "x"
+  // }`;
 }
 console.log(solution("3x + 7 + x"));
 console.log(solution("x + x + x"));
 console.log(solution("7x + 4 + 9 + 5x"));
 console.log(solution("x + 1"));
+console.log(solution("0x + 0"));
 
 console.log(solution("20x + 1"));
 console.log(solution("20 + 1"));
