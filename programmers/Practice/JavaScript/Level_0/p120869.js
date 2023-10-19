@@ -3,17 +3,24 @@
 // spell에 담긴 알파벳을 한번씩만 모두 사용한 단어가 dic에 존재한다면 1,
 // 존재하지 않는다면 2를 return하도록 solution 함수를 완성해주세요.
 function solution(spell, dic) {
-  var answer = 2;
-  dic.map((n) => {
-    let temp = 0;
-    spell.map((x) => {
-      x;
-      n;
-      n.includes(x) ? (temp = 1) : (temp = 0);
-    });
-    temp;
-    temp ? (answer = 1) : (answer = 2);
-  });
-  return answer;
+  // let result = dic.map((n) => {
+  //   let temp = 0;
+  //   for (let i = 0; i < spell.length; i++) {
+  //     if (!n.includes(spell[i])) {
+  //       temp = 0;
+  //       break;
+  //     }
+  //     temp = 1;
+  //   }
+  //   return temp;
+  // });
+  // return result.includes(1) ? 1 : 2;
+  return dic.some((n) => spell.sort().toString() === [...n].sort().toString())
+    ? 1
+    : 2;
 }
 console.log(solution(["p", "o", "s"], ["sod", "eocd", "qixm", "adio", "soo"]));
+console.log(solution(["z", "d", "x"], ["def", "dww", "dzx", "loveaw"]));
+console.log(
+  solution(["s", "o", "m", "d"], ["moos", "dzx", "smm", "sunmmo", "som"])
+);
